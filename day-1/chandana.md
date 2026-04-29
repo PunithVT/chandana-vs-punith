@@ -2,7 +2,7 @@
 
 Notes, labs, and experiments for Day 1.
 
-Picking up from the [Day 1 topics](../README.md) — focusing on the AWS-heavy ones:
+Picking up from the [Day 1 topics](./README.md) — focusing on the AWS-heavy ones:
 
 - [ ] On-prem to AWS migration (lift-and-shift vs replatform vs refactor)
 - [ ] Monolith to microservices on ECS / EKS

@@ -10,9 +10,9 @@ Topic for today: **migrations**. Both of us pick a couple of items from the list
 4. SQL → vector DB migration for RAG and semantic search (pgvector, Pinecone, OpenSearch)
 5. Switching LLM providers in an agent — moving from OpenAI to Amazon Bedrock / Claude
 
-## Folders
+## Notes
 
-- [punith/](./punith/) — Agentic AI angle on the topics
-- [chandana/](./chandana/) — AWS angle on the topics
+- [punith.md](./punith.md) — Agentic AI angle on the topics
+- [chandana.md](./chandana.md) — AWS angle on the topics
 
 Tracking issue: [#1](https://github.com/PunithVT/chandana-vs-punith/issues/1)
