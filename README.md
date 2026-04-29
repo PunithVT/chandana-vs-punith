@@ -26,14 +26,14 @@ If you're starting your own journey into either of these fields, the mistakes lo
 
 ## Structure
 
-One folder per day. Inside each day, both of us have our own subfolder for that day's notes and code.
+One folder per day. Inside each day, both of us have our own notes file for that day.
 
 ```
 chandana-vs-punith/
 ├── day-1/
 │   ├── README.md     # the day's topic + plan
-│   ├── punith/       # Agentic AI angle
-│   └── chandana/     # AWS angle
+│   ├── punith.md     # Agentic AI angle
+│   └── chandana.md   # AWS angle
 ├── day-2/
 │   └── ...
 └── ...
