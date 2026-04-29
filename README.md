@@ -26,12 +26,20 @@ If you're starting your own journey into either of these fields, the mistakes lo
 
 ## Structure
 
+One folder per day. Inside each day, both of us have our own subfolder for that day's notes and code.
+
 ```
 chandana-vs-punith/
-├── punith/      # Agentic AI track — notes, experiments, projects
-├── chandana/    # AWS track — labs, services, architecture notes
-└── shared/      # Cross-domain learnings and joint experiments
+├── day-1/
+│   ├── README.md     # the day's topic + plan
+│   ├── punith/       # Agentic AI angle
+│   └── chandana/     # AWS angle
+├── day-2/
+│   └── ...
+└── ...
 ```
+
+Day 1 topic: [migrations](./day-1/README.md).
 
 ## Tracking Progress
 
