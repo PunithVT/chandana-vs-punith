@@ -39,7 +39,7 @@ chandana-vs-punith/
 └── ...
 ```
 
-Day 1 topic: [migrations](./day-1/README.md).
+Day 1 topic: [AWS Lambda & Python Lambda](./day-1/README.md).
 
 ## Tracking Progress
 

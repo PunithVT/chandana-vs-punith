@@ -4,8 +4,8 @@ Notes, code, and experiments for Day 1.
 
 Picking up from the [Day 1 topics](./README.md) — focusing on the ones closest to the Agentic AI track:
 
-- [ ] SQL → vector DB migration for RAG
-- [ ] Switching LLM providers in an agent (OpenAI → Bedrock / Claude)
+- [ ] Writing your first Python Lambda function (handler, event, context)
+- [ ] Using Lambda with Agentic AI — invoking Lambda as a tool in an agent (Bedrock Agents, LangChain tools)
 
 ## Notes
 

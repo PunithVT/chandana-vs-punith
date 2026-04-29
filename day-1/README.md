@@ -1,14 +1,14 @@
-# Day 1 — Migrations
+# Day 1 — AWS Lambda & Python Lambda
 
-Topic for today: **migrations**. Both of us pick a couple of items from the list and write notes / try things out under our respective folders.
+Topic for today: **AWS Lambda and Python Lambda**. Both of us pick a couple of items from the list and write notes / try things out under our respective folders.
 
 ## Topics
 
-1. How to migrate from one DB to another DB (schema + data, with minimal downtime)
-2. On-prem to AWS migration — when to lift-and-shift vs replatform vs refactor
-3. Monolith to microservices on containers (ECS / EKS)
-4. SQL → vector DB migration for RAG and semantic search (pgvector, Pinecone, OpenSearch)
-5. Switching LLM providers in an agent — moving from OpenAI to Amazon Bedrock / Claude
+1. What is AWS Lambda — serverless compute model, cold starts, execution environments
+2. Writing your first Python Lambda function — handler signature, event & context objects
+3. Deploying a Python Lambda — packaging dependencies, layers, and the Lambda console vs CLI
+4. Triggering Lambda — API Gateway, S3 events, EventBridge, and SQS as event sources
+5. Using Lambda with Agentic AI — invoking Lambda as a tool in an agent (Bedrock Agents, LangChain tools)
 
 ## Notes
 
