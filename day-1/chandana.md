@@ -4,9 +4,9 @@ Notes, labs, and experiments for Day 1.
 
 Picking up from the [Day 1 topics](./README.md) — focusing on the AWS-heavy ones:
 
-- [ ] On-prem to AWS migration (lift-and-shift vs replatform vs refactor)
-- [ ] Monolith to microservices on ECS / EKS
-- [ ] DB-to-DB migration with AWS DMS
+- [ ] What is AWS Lambda — serverless compute model, cold starts, execution environments
+- [ ] Deploying a Python Lambda — packaging dependencies, layers, console vs CLI
+- [ ] Triggering Lambda — API Gateway, S3 events, EventBridge, SQS
 
 ## Notes
 
