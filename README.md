@@ -34,14 +34,23 @@ chandana-vs-punith/
 │   ├── README.md     # the day's topic + plan
 │   ├── punith.md     # Agentic AI angle
 │   └── chandana.md   # AWS angle
-├── day2-<topic>/
+├── day2-iam/
 │   └── ...
 └── ...
 ```
 
 Folders are named `day<N>-<short-topic>` so the topic is visible from the repo root.
 
-Day 1 topic: [AWS Lambda & Python Lambda](./day1-lambda/README.md).
+## Days
+
+| Day | Topic | Folder | Issue |
+| --- | --- | --- | --- |
+| 1 | AWS Lambda & Python Lambda | [day1-lambda/](./day1-lambda/) | [#1](https://github.com/PunithVT/chandana-vs-punith/issues/1) |
+| 2 | IAM & Security | [day2-iam/](./day2-iam/) | [#2](https://github.com/PunithVT/chandana-vs-punith/issues/2) |
+| 3 | RAG end-to-end | _coming up_ | [#3](https://github.com/PunithVT/chandana-vs-punith/issues/3) |
+| 4 | MCP (Model Context Protocol) | _coming up_ | [#4](https://github.com/PunithVT/chandana-vs-punith/issues/4) |
+| 5 | Observability | _coming up_ | [#5](https://github.com/PunithVT/chandana-vs-punith/issues/5) |
+| 6 | Containers (ECS / EKS / Fargate) | _coming up_ | [#6](https://github.com/PunithVT/chandana-vs-punith/issues/6) |
 
 ## Tracking Progress
 
