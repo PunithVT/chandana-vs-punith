@@ -30,16 +30,18 @@ One folder per day. Inside each day, both of us have our own notes file for that
 
 ```
 chandana-vs-punith/
-├── day-1/
+├── day1-lambda/
 │   ├── README.md     # the day's topic + plan
 │   ├── punith.md     # Agentic AI angle
 │   └── chandana.md   # AWS angle
-├── day-2/
+├── day2-<topic>/
 │   └── ...
 └── ...
 ```
 
-Day 1 topic: [AWS Lambda & Python Lambda](./day-1/README.md).
+Folders are named `day<N>-<short-topic>` so the topic is visible from the repo root.
+
+Day 1 topic: [AWS Lambda & Python Lambda](./day1-lambda/README.md).
 
 ## Tracking Progress
 
