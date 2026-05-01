@@ -237,3 +237,334 @@ Candidate data
 
 Audit logs for every AI action
 
+
+
+
+
+---
+
+Secrets Manager vs Parameter Store (AWS)
+
+Both are from Amazon Web Services, but they’re built for slightly different jobs.
+
+1) AWS Secrets Manager
+
+Best for: sensitive, frequently rotated secrets
+
+What it does well:
+
+Built-in automatic rotation
+
+Native integration with services like:
+
+Amazon RDS
+
+AWS Lambda
+
+
+Fine-grained access via AWS Identity and Access Management
+
+Versioning of secrets
+
+
+Use cases:
+
+Database credentials
+
+Third-party API keys (OpenAI, Stripe, etc.)
+
+OAuth client secrets
+
+
+Tradeoff:
+
+Costs more (you pay per secret + API calls)
+
+
+
+---
+
+2) AWS Systems Manager Parameter Store
+
+Best for: config + low-frequency secrets
+
+What it does well:
+
+Store:
+
+Config values (env variables)
+
+Feature flags
+
+
+Can store encrypted values using AWS Key Management Service
+
+Cheaper (even free tier)
+
+
+Limitations:
+
+No native rotation (you build it yourself)
+
+Less feature-rich for secret lifecycle
+
+
+Use cases:
+
+App configs (ENV=prod, MAX_RETRIES=3)
+
+Non-critical secrets (internal tokens)
+
+
+
+---
+
+Quick Decision Rule
+
+If it’s sensitive + needs rotation → Secrets Manager
+
+If it’s config or static → Parameter Store
+
+
+
+---
+
+Secret Rotation (This is where most people mess up)
+
+Why rotation matters:
+
+If a key leaks:
+
+Without rotation → permanent compromise
+
+With rotation → limited damage window
+
+
+
+---
+
+Rotation Strategies
+
+1) Automatic Rotation (Best)
+
+Supported directly in Secrets Manager:
+
+Works great with DBs like Amazon RDS
+
+Uses AWS Lambda under the hood
+
+
+Flow:
+
+1. Generate new secret
+
+
+2. Update service (DB/API)
+
+
+3. Test new secret
+
+
+4. Deprecate old one
+
+
+
+
+---
+
+2) Dual-Key Strategy (For APIs)
+
+For things like OpenAI keys:
+
+Keep old + new active temporarily
+
+Switch traffic gradually
+
+Revoke old key
+
+
+
+---
+
+3) Manual Rotation (Not ideal)
+
+Human updates keys
+
+Error-prone
+
+Usually forgotten
+
+
+
+---
+
+KMS Basics (Don’t skip this)
+
+AWS Key Management Service
+
+This is your root of trust.
+
+What it does:
+
+Creates and manages encryption keys
+
+Encrypts secrets at rest
+
+Controls who can decrypt
+
+
+
+---
+
+How it fits:
+
+Your Secret → Encrypted using KMS → Stored in Secrets Manager / Parameter Store
+
+
+---
+
+Key Concepts
+
+1) CMK (Customer Managed Keys)
+
+You control:
+
+Permissions
+
+Rotation
+
+Usage
+
+
+
+2) Envelope Encryption
+
+KMS doesn’t encrypt large data directly
+
+It generates a data key
+
+Data key encrypts your secret
+
+
+
+---
+
+Access Control
+
+Use AWS Identity and Access Management:
+
+Who can:
+
+Read secret
+
+Decrypt via KMS
+
+Rotate
+
+
+
+Important:
+Even if someone has the secret → they still need KMS permission to decrypt.
+
+
+---
+
+Best Practices (Non-Negotiable)
+
+1) Never hardcode secrets
+
+No .env in production
+
+No secrets in frontend
+
+
+
+---
+
+2) Use backend proxy pattern
+
+Instead of:
+
+Frontend → OpenAI API
+
+Do:
+
+Frontend → Backend → OpenAI API
+
+
+---
+
+3) Scope secrets per service
+
+Don’t reuse keys across:
+
+staging / prod
+
+different microservices
+
+
+
+
+---
+
+4) Audit everything
+
+Enable logging via AWS CloudTrail
+
+Track:
+
+Who accessed secrets
+
+When
+
+From where
+
+
+
+
+---
+
+5) Combine with IAM roles
+
+EC2 / Lambda should assume roles
+
+Avoid static credentials entirely
+
+
+
+---
+
+For Your HireAI Platform (Real Advice)
+
+You’ll likely have:
+
+OpenAI API keys
+
+Email service creds
+
+DB credentials
+
+Candidate data access
+
+
+Recommended setup:
+
+Store all sensitive secrets in Secrets Manager
+
+Use Parameter Store for configs
+
+Encrypt everything with KMS
+
+Implement:
+
+Per-service IAM roles
+
+Rotation for DB + API keys
+
+Audit logs
+
+
+
+
+---
+
