@@ -568,3 +568,199 @@ Audit logs
 
 ---
 
+
+“Lambda should assume roles” is AWS shorthand for:
+your AWS Lambda function should not have hardcoded credentials—it should temporarily inherit permissions from an IAM role.
+
+
+---
+
+What it actually means
+
+Instead of this (bad practice):
+
+// ❌ Hardcoded credentials
+const accessKey = "AKIA...";
+const secretKey = "xyz...";
+
+You do this:
+
+Attach a role to your Lambda
+
+Lambda automatically gets temporary credentials
+
+
+That role is managed by AWS Identity and Access Management.
+
+
+---
+
+Simple analogy
+
+Think of it like:
+
+IAM Role = “job badge”
+
+Lambda = employee
+
+
+Instead of giving the employee permanent master keys,
+you give them a badge that only works for specific tasks.
+
+
+---
+
+How “Assume Role” works
+
+Under the hood:
+
+1. Lambda starts
+
+
+2. It assumes an IAM role
+
+
+3. AWS gives temporary credentials (short-lived)
+
+
+4. Lambda uses them to access services
+
+
+
+
+---
+
+Example
+
+Say your Lambda needs to read a secret from
+AWS Secrets Manager
+
+Step 1: Create a role
+
+Example policy:
+
+{
+  "Effect": "Allow",
+  "Action": "secretsmanager:GetSecretValue",
+  "Resource": "*"
+}
+
+
+---
+
+Step 2: Attach role to Lambda
+
+Now your Lambda can do:
+
+import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
+
+const client = new SecretsManagerClient();
+
+const secret = await client.send(
+  new GetSecretValueCommand({ SecretId: "my-secret" })
+);
+
+No API keys needed.
+
+
+---
+
+Why this is important
+
+1) No hardcoded secrets
+
+Nothing leaks in GitHub
+
+Nothing exposed in frontend
+
+
+
+---
+
+2) Temporary credentials
+
+Auto-expire
+
+Harder to misuse
+
+
+
+---
+
+3) Fine-grained control
+
+Using AWS Identity and Access Management you can say:
+
+This Lambda can:
+
+read secrets ✅
+
+NOT delete them ❌
+
+
+
+
+---
+
+4) Works with KMS securely
+
+If secrets are encrypted using
+AWS Key Management Service
+
+Then:
+
+Role must also have decrypt permission
+
+
+
+---
+
+Common mistake (avoid this)
+
+❌ Putting:
+
+DB passwords
+
+API keys
+
+OpenAI keys
+
+
+directly in Lambda code or env variables without encryption
+
+
+---
+
+In your HireAI case
+
+You likely have Lambdas for:
+
+Resume processing
+
+AI scoring
+
+Sending emails
+
+
+Each Lambda should have its own role:
+
+Example:
+
+Resume parser Lambda → can read S3 + call OpenAI
+
+Email Lambda → can use SES only
+
+Admin Lambda → broader access
+
+
+👉 Don’t give one Lambda full access to everything.
+
+
+---
+
+One-line takeaway
+
+“Lambda assuming a role” = secure, temporary, permission-controlled access to AWS services without storing credentials.
+
+
+---
