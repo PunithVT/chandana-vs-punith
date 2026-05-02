@@ -1,4 +1,4 @@
-# chandana-vs-punith
+# chandana-vs-punith 
 
 > A **30-day learning challenge** where two engineers go deep on two of the most in-demand stacks of 2026 — **AWS** and **Agentic AI** — and document everything publicly, including the beginner-to-advanced mistakes most tutorials skip.
 
