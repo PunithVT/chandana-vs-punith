@@ -32,7 +32,7 @@ This repo is a **public, daily learning log** of those gotchas. Plain language, 
 | 1 | AWS Lambda & Python Lambda — handler, event, context, triggers, agent-tool patterns | [day1-lambda/](./day1-lambda/) | [#1](https://github.com/PunithVT/chandana-vs-punith/issues/1) |
 | 2 | IAM & Security — policies, AssumeRole, prompt injection, secrets handling | [day2-iam/](./day2-iam/) | [#2](https://github.com/PunithVT/chandana-vs-punith/issues/2) |
 | 3 | RAG end-to-end — embeddings, chunking, OpenSearch, Bedrock Knowledge Bases, reranking | [day3-rag/](./day3-rag/) | [#3](https://github.com/PunithVT/chandana-vs-punith/issues/3) |
-| 4 | MCP (Model Context Protocol) — building servers, hosting on AWS, Claude Desktop integration | _coming up_ | [#4](https://github.com/PunithVT/chandana-vs-punith/issues/4) |
+| 4 | MCP (Model Context Protocol) — building servers, hosting on AWS, Claude Desktop integration | [day4-mcp/](./day4-mcp/) | [#4](https://github.com/PunithVT/chandana-vs-punith/issues/4) |
 | 5 | Observability — CloudWatch, X-Ray, LangSmith, OpenTelemetry, agent traces | _coming up_ | [#5](https://github.com/PunithVT/chandana-vs-punith/issues/5) |
 | 6 | Containers — ECS, EKS, Fargate, Dockerized agents, MCP servers in containers | _coming up_ | [#6](https://github.com/PunithVT/chandana-vs-punith/issues/6) |
 
