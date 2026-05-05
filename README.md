@@ -33,8 +33,8 @@ This repo is a **public, daily learning log** of those gotchas. Plain language, 
 | 2 | IAM & Security — policies, AssumeRole, prompt injection, secrets handling | [day2-iam/](./day2-iam/) | [#2](https://github.com/PunithVT/chandana-vs-punith/issues/2) |
 | 3 | RAG end-to-end — embeddings, chunking, OpenSearch, Bedrock Knowledge Bases, reranking | [day3-rag/](./day3-rag/) | [#3](https://github.com/PunithVT/chandana-vs-punith/issues/3) |
 | 4 | MCP (Model Context Protocol) — building servers, hosting on AWS, Claude Desktop integration | [day4-mcp/](./day4-mcp/) | [#4](https://github.com/PunithVT/chandana-vs-punith/issues/4) |
-| 5 | Observability — CloudWatch, X-Ray, LangSmith, OpenTelemetry, agent traces | _coming up_ | [#5](https://github.com/PunithVT/chandana-vs-punith/issues/5) |
-| 6 | Containers — ECS, EKS, Fargate, Dockerized agents, MCP servers in containers | _coming up_ | [#6](https://github.com/PunithVT/chandana-vs-punith/issues/6) |
+| 5 | Observability — CloudWatch, X-Ray, LangSmith, OpenTelemetry, agent traces | [day5-observability/](./day5-observability/) | [#5](https://github.com/PunithVT/chandana-vs-punith/issues/5) |
+| 6 | Containers — ECS, EKS, Fargate, Dockerized agents, MCP servers in containers | [day6-containers/](./day6-containers/) | [#6](https://github.com/PunithVT/chandana-vs-punith/issues/6) |
 
 Days 7–30 will be planned as we go, based on what gaps show up in our work.
 
