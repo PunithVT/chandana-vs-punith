@@ -140,13 +140,12 @@ Example: `Duration` metric on Lambda has a `FunctionName` dimension → one time
 
 ### Custom metrics — your own business numbers
 
-When AWS metrics aren't enough, publish your own. Examples for Rooman:
+When AWS metrics aren't enough, publish your own. Examples:
 - Orders placed per minute
 - Embedding generation duration
-- CRM sync failures
+- Background job failures
 
-Custom metrics cost $0.30/metric/month — negligible. Use a clear namespace like `Rooman/App` to keep them organised in the console.
-
+Custom metrics cost $0.30/metric/month — negligible. Use a clear namespace like `MyApp/Production` to keep them organised in the console.
 ---
 
 ### Alarms — what's worth alerting on
