@@ -175,7 +175,7 @@ Three states: `OK` → `ALARM` → `INSUFFICIENT_DATA`
 
 Group related metrics into one view. Build one dashboard per service, not one giant account dashboard.
 
-A good Rooman dashboard has: Lambda errors, Lambda p99 latency, ECS running task count, RDS connections, RDS free storage — all on one screen.
+A good dashboard has: Lambda errors, Lambda p99 latency, ECS running task count, RDS connections, RDS free storage — all on one screen.
 
 ---
 
