@@ -35,8 +35,8 @@ This repo is a **public, daily learning log** of those gotchas. Plain language, 
 | 4 | MCP (Model Context Protocol) — building servers, hosting on AWS, Claude Desktop integration | [day4-mcp/](./day4-mcp/) | [#4](https://github.com/PunithVT/CSvsPVT/issues/4) |
 | 5 | Observability — CloudWatch, X-Ray, LangSmith, OpenTelemetry, agent traces | [day5-observability/](./day5-observability/) | [#5](https://github.com/PunithVT/CSvsPVT/issues/5) |
 | 6 | Containers — ECS, EKS, Fargate, Dockerized agents, MCP servers in containers | [day6-containers/](./day6-containers/) | [#6](https://github.com/PunithVT/CSvsPVT/issues/6) |
-| 7 | Bedrock Agents & Knowledge Bases — action groups, ingestion jobs, agent traces | _coming up_ | [#10](https://github.com/PunithVT/CSvsPVT/issues/10) |
-| 8 | API Gateway & Agent-Facing APIs — REST/HTTP, streaming, MCP-over-HTTP, OpenAPI for tools | _coming up_ | [#11](https://github.com/PunithVT/CSvsPVT/issues/11) |
+| 7 | Bedrock Agents & Knowledge Bases — action groups, ingestion jobs, agent traces | [day7-bedrock-agents/](./day7-bedrock-agents/) | [#10](https://github.com/PunithVT/CSvsPVT/issues/10) |
+| 8 | API Gateway & Agent-Facing APIs — REST/HTTP, streaming, MCP-over-HTTP, OpenAPI for tools | [day8-api-gateway/](./day8-api-gateway/) | [#11](https://github.com/PunithVT/CSvsPVT/issues/11) |
 | 9 | DynamoDB & Agent Memory — single-table design, short/long-term memory patterns | _coming up_ | [#12](https://github.com/PunithVT/CSvsPVT/issues/12) |
 | 10 | Step Functions & Agent Orchestration — state machines, retries, HITL, LangGraph parallels | _coming up_ | [#13](https://github.com/PunithVT/CSvsPVT/issues/13) |
 | 11 | Cost Optimization — AWS levers (Savings Plans, S3 tiers) + LLM levers (caching, routing) | _coming up_ | [#14](https://github.com/PunithVT/CSvsPVT/issues/14) |
