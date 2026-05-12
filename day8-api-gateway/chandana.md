@@ -126,7 +126,7 @@ A custom domain maps your own domain (`api.example.com`) to that URL. Under the 
 3. Create an **API mapping** — which API and stage lives at which path prefix
 4. Add a **CNAME** in Route 53 pointing your domain to the API Gateway domain name AWS provides
 
-### Path-based routing across multiple APIs
+### Path-based routing across multiple API
 
 You can map multiple APIs to a single custom domain using path prefixes — no load balancer required.
 
