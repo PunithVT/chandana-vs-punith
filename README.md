@@ -37,7 +37,7 @@ This repo is a **public, daily learning log** of those gotchas. Plain language, 
 | 6 | Containers — ECS, EKS, Fargate, Dockerized agents, MCP servers in containers | [day6-containers/](./day6-containers/) | [#6](https://github.com/PunithVT/CSvsPVT/issues/6) |
 | 7 | Bedrock Agents & Knowledge Bases — action groups, ingestion jobs, agent traces | [day7-bedrock-agents/](./day7-bedrock-agents/) | [#10](https://github.com/PunithVT/CSvsPVT/issues/10) |
 | 8 | API Gateway & Agent-Facing APIs — REST/HTTP, streaming, MCP-over-HTTP, OpenAPI for tools | [day8-api-gateway/](./day8-api-gateway/) | [#11](https://github.com/PunithVT/CSvsPVT/issues/11) |
-| 9 | DynamoDB & Agent Memory — single-table design, short/long-term memory patterns | _coming up_ | [#12](https://github.com/PunithVT/CSvsPVT/issues/12) |
+| 9 | DynamoDB & Agent Memory — single-table design, short/long-term memory patterns | [day9-dynamodb/](./day9-dynamodb/) | [#12](https://github.com/PunithVT/CSvsPVT/issues/12) |
 | 10 | Step Functions & Agent Orchestration — state machines, retries, HITL, LangGraph parallels | _coming up_ | [#13](https://github.com/PunithVT/CSvsPVT/issues/13) |
 | 11 | Cost Optimization — AWS levers (Savings Plans, S3 tiers) + LLM levers (caching, routing) | _coming up_ | [#14](https://github.com/PunithVT/CSvsPVT/issues/14) |
 | 12 | Guardrails & Responsible AI — Bedrock Guardrails, prompt/output filtering, PII, safety eval | _coming up_ | [#15](https://github.com/PunithVT/CSvsPVT/issues/15) |
